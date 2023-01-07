@@ -1,0 +1,25 @@
+kubernetes manage service account not user accounts all managed by kube-api server
+
+how linux ❑ Password based authentication disabled
+The best way to disable password-based authentication on Linux is to edit the /etc/ssh/sshd_config file.
+Look for the line that says “PasswordAuthentication yes” and change it to “PasswordAuthentication no”. 
+Then save the file and restart the ssh service with the command “service ssh restart”. This will disable password-based authentication for all users.
+
+how to set SSH Key based authentication on linux
+
+1. Generate a SSH Key
+
+The first step to setting up SSH key based authentication is to generate a SSH key. This can be done by running the ssh-keygen command in a terminal window.
+
+2. Copy the Public Key
+
+Once the SSH key is generated, you need to copy the public key to the server you wish to access. This can be done using the ssh-copy-id command. 
+This command will copy the public key to the server and set the appropriate file permissions.
+
+3. Configure the Server
+
+The final step is to configure the server to use the SSH key for authentication. This can be done by editing the sshd_config file in the /etc/ssh directory.
+You need to set the PasswordAuthentication to no and PubkeyAuthentication to yes. Once this is done, you can restart the sshd service to apply the changes.
+
+Now you can try to connect to the server using the SSH key. If everything is configured correctly, you should be able to access the server without 
+needing to enter a password.
