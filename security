@@ -46,3 +46,5 @@ kubectl list serviceaccount
 curl https://kube-server-ip:6443/
 
 
+
+
