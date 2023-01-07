@@ -1,3 +1,18 @@
+Authentication - Who can access?
+Files – Username and Passwords
+❑ Files – Username and Tokens
+❑ Certificates
+❑ External Authentication providers - LDAP
+❑ Service Accounts
+
+Authorization
+What can they do?
+❑ RBAC Authorization
+❑ ABAC Authorization
+❑ Node Authorization
+❑ Webhook Mode
+
+
 kubernetes manage service account not user accounts all managed by kube-api server
 
 how linux ❑ Password based authentication disabled
@@ -23,3 +38,11 @@ You need to set the PasswordAuthentication to no and PubkeyAuthentication to yes
 
 Now you can try to connect to the server using the SSH key. If everything is configured correctly, you should be able to access the server without 
 needing to enter a password.
+
+
+kubectl create serviceaccount sa1
+
+kubectl list serviceaccount
+curl https://kube-server-ip:6443/
+
+
